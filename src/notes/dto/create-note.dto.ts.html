@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/users/dto/create-user.dto.ts</title>
+    <title>Code coverage report for src/notes/dto/create-note.dto.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="..\..\..\prettify.css" />
     <link rel="stylesheet" href="..\..\..\base.css" />
@@ -16,7 +16,7 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/users/dto</a> create-user.dto.ts
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/notes/dto</a> create-note.dto.ts
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
@@ -25,9 +25,9 @@
         <span class='fraction'>15/18</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">55.17% </span>
+        <span class="strong">61.54% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>16/29</span>
+        <span class='fraction'>24/39</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -56,9 +56,7 @@
 <a name='L8'></a><a href='#L8'>8</a>
 <a name='L9'></a><a href='#L9'>9</a>
 <a name='L10'></a><a href='#L10'>10</a>
-<a name='L11'></a><a href='#L11'>11</a>
-<a name='L12'></a><a href='#L12'>12</a>
-<a name='L13'></a><a href='#L13'>13</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L11'></a><a href='#L11'>11</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
@@ -68,20 +66,16 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import * as mongoose from 'mongoose';
-import { ApiModelProperty, ApiModelPropertyOptional } from '@nestjs/swagger';
-<span class="branch-0 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ></span></span>
-expo<span class="missing-if-branch" title="else path not taken" >E</span>rt class CreateUserDto {
-  @ApiMod<span class="cstat-no" title="statement not covered" >elProperty({type: String, required: true})<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
-  readonly userName: stri<span class="branch-2 cbranch-no" title="branch not covered" >ng;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import { ApiModelProperty, ApiModelPropertyOptional } from '@nestjs/swagger';
+export class CreateNoteDto {
+  @ApiModelProperty({type: String, require<span class="branch-0 cbranch-no" title="branch not covered" >d: true</span>})<span class="branch-0 cbranch-no" title="branch not covered" ></span>
+  re<span class="missing-if-branch" title="else path not taken" >E</span>adonly text: string;
+<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
+  @ApiModelPropertyOption<span class="branch-2 cbranch-no" title="branch not covered" >al({type: String, format: 'date-time'}</span>)
+  readonly createdDate: Date;
 &nbsp;
-  @ApiModelProperty({type: String, required: true})
-  re<span class="missing-if-branch" title="else path not taken" >E</span>adonly name: string;
-  
-  @ApiModelPropertyOptional({type: String, format: 'ObjectId'})
-  readonly notes: [mongoose.Types.ObjectId];
+  @A<span class="missing-if-branch" title="else path not taken" >E</span>piModelPropertyOptional({type: String, format: 'date-time'})
+  readonly updatedDate: Date;
 }</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

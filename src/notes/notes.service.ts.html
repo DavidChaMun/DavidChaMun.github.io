@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/users/users.service.ts</title>
+    <title>Code coverage report for src/notes/notes.service.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="..\..\prettify.css" />
     <link rel="stylesheet" href="..\..\base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="..\..\index.html">All files</a> / <a href="index.html">src/users</a> users.service.ts
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/notes</a> notes.service.ts
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">37.04% </span>
+        <span class="strong">37.74% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>20/54</span>
+        <span class='fraction'>20/53</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">46.15% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>5/24</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">37.21% </span>
+        <span class="strong">38.1% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>16/43</span>
+        <span class='fraction'>16/42</span>
       </div>
     </div>
     <p class="quiet">
@@ -90,10 +90,7 @@
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
 <a name='L44'></a><a href='#L44'>44</a>
-<a name='L45'></a><a href='#L45'>45</a>
-<a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a>
-<a name='L48'></a><a href='#L48'>48</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L45'></a><a href='#L45'>45</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -126,6 +123,10 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -133,61 +134,51 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Model } from 'mongoose';
-import { Injectable, Inject } from '@nestjs/common';
-import { User } from './interfaces/user.interface';<span class="branch-1 cbranch-no" title="branch not covered" ></span>
-impo<span class="missing-if-branch" title="else path not taken" >E</span>rt { CreateUserDto } from './dto/create-user.dto';
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { CreateNoteDto } from './dto/create-note.dto';
+import { Model } from 'mongoose';
+import { Injectable, Inject } from '@nestjs/common'<span class="branch-1 cbranch-no" title="branch not covered" >;</span>
+impo<span class="missing-if-branch" title="else path not taken" >E</span>rt { Note } from './interfaces/Note.interface';
 <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
-<span class="branch-2 cbranch-no" title="branch not covered" ><span class="branch-1 cbranch-no" title="branch not covered" ></span></span>
-@Injectable()
-export class UsersService {
-  co<span class="missing-if-branch" title="else path not taken" >E</span>nstructor(@Inject('UserModelToken') private readonly userModel: Model&lt;User&gt;) {}
-&nbsp;
-  async create(createUserDto: CreateUserDto): Promise&lt;User&gt; {
-    console.log(createUserDto);
-    const createdUser = new this.userModel(createUserDto);
-    return await createdUser.save();<span class="fstat-no" title="function not covered" ></span>
-  }<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
-<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span>
-  async findOne(u<span class="fstat-no" title="function not covered" >Name): Pr</span>omise&lt;Use<span class="cstat-no" title="statement not covered" >r&gt; {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
-    console.log(u<span class="fstat-no" title="function not covered" >Name)</span>;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span>
-    retu<span class="cstat-no" title="statement not covered" >rn await this.userModel.findOne( {"userName" : uName} , function(err, u</span>ser){
+@Injectable()<span class="branch-2 cbranch-no" title="branch not covered" ><span class="branch-1 cbranch-no" title="branch not covered" ></span></span>
+export class NotesService {
+  constructor(@Inject('NoteModelToken') private readonly noteModel: Model&lt;Note&gt;) {}
+<span class="missing-if-branch" title="else path not taken" >E</span>
+  async create(createNoteDto: CreateNoteDto): Promise&lt;Note&gt; {
+    const createdNote = new this.noteModel(createNoteDto);
+    return await createdNote.save();
+  }
+<span class="fstat-no" title="function not covered" ></span>
+  as<span class="cstat-no" title="statement not covered" >ync findAll(): Promise&lt;Note[]&gt; {<span class="fstat-no" title="function not covered" ></span></span>
+    return await <span class="fstat-no" title="function not covered" >this.noteM</span>odel.find<span class="cstat-no" title="statement not covered" >().exe<span class="cstat-no" title="statement not covered" >c();<span class="cstat-no" title="statement not covered" ></span></span></span>
+  }<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span>
+<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span>
+  async <span class="cstat-no" title="statement not covered" >findOne(idNote): Promise&lt;Note&gt; {</span>
+    console.log(idNote);
+    return await this.noteModel.findById( idNote , function(err, note){
       if (err) {
         return console.log("error: " + err);
       }
-      console.log('into mongoose findone\n' + user);
+      console.log('into mongoose findone\n' + note);
     });
   }
-&nbsp;
-  async findAll(): Promise&lt;User[]&gt; {
-    return await this.userModel.find().exec();
-  }
-<span class="fstat-no" title="function not covered" ></span>
-  async <span class="cstat-no" title="statement not covered" >delete(uName): Promise&lt;User&gt; {<span class="fstat-no" title="function not covered" ></span></span>
-    return a<span class="cstat-no" title="statement not covered" >wait  this.userModel.deleteO</span>ne({userName: uName}, function(err) {
-      if (err) {<span class="cstat-no" title="statement not covered" ></span>
-        retu<span class="cstat-no" title="statement not covered" >rn console.log("error: " + err);</span>
-      }
-    }).exec();
-  }<span class="fstat-no" title="function not covered" ></span>
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
-  async upda<span class="cstat-no" title="statement not covered" >te(uName, updateUser</span>): Promise&lt;User&gt; {
-    console.<span class="cstat-no" title="statement not covered" >log(updateUser);<span class="fstat-no" title="function not covered" ></span></span>
-    return await<span class="cstat-no" title="statement not covered" >  this.userModel.updateOne({userName: uName}, updateUser, function(err) {</span>
-      if (err) {<span class="cstat-no" title="statement not covered" ></span>
-        return console.log("error: " + err);
+  async delete(idNote): Promise&lt;Note&gt; {
+    return await  this.noteModel.findByIdAndRemove( idNote, function(err) {
+<span class="fstat-no" title="function not covered" ></span>      if (err) {
+<span class="cstat-no" title="statement not covered" >        return console.log("error: " + err);<span class="fstat-no" title="function not covered" ></span></span>
       }<span class="cstat-no" title="statement not covered" ></span>
-    }).exec();
+    }).exec(<span class="cstat-no" title="statement not covered" >);</span>
   }
-}
-<span class="fstat-no" title="function not covered" ></span></pre></td></tr>
+&nbsp;
+  as<span class="fstat-no" title="function not covered" >yn</span>c update(idNote, updateNote): Promise&lt;Note&gt; {
+    cons<span class="cstat-no" title="statement not covered" >ole.log(updateNote);<span class="fstat-no" title="function not covered" ></span></span>
+    return a<span class="cstat-no" title="statement not covered" >wait  this.noteModel.findByIdAndUpdate( idN</span>ote, updateNote, function(err) {
+      if (err) {
+        return console.log("error: " + err);
+<span class="fstat-no" title="function not covered" ></span>      }
+    }).e<span class="cstat-no" title="statement not covered" >xec();<span class="fstat-no" title="function not covered" ></span></span>
+  }<span class="cstat-no" title="statement not covered" ></span>
+}<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" ></span></pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
